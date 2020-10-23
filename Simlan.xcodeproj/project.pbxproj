@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19AFA1724B47871F56B7BA17 /* Pods_Simlan_SimlanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10C2D75A6C02A1E12543685 /* Pods_Simlan_SimlanUITests.framework */; };
+		30EDCB96254165BE00483394 /* SimlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDCB95254165BE00483394 /* SimlanApp.swift */; };
+		30EDCB98254165BE00483394 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDCB97254165BE00483394 /* ContentView.swift */; };
+		30EDCB9A254165C000483394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EDCB99254165C000483394 /* Assets.xcassets */; };
+		30EDCB9D254165C000483394 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EDCB9C254165C000483394 /* Preview Assets.xcassets */; };
+		30EDCBA8254165C000483394 /* SimlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDCBA7254165C000483394 /* SimlanTests.swift */; };
+		30EDCBB3254165C000483394 /* SimlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDCBB2254165C000483394 /* SimlanUITests.swift */; };
+		30EDCC04254177F900483394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30EDCC03254177F900483394 /* GoogleService-Info.plist */; };
+		30F6B7292542020D00EA56EE /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B7282542020D00EA56EE /* SignupView.swift */; };
+		30F6B73A254203B500EA56EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B739254203B500EA56EE /* LoginView.swift */; };
+		30F6B73F254208A200EA56EE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B73E254208A200EA56EE /* ErrorView.swift */; };
+		30F6B744254208EF00EA56EE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B743254208EF00EA56EE /* HomeView.swift */; };
+		30F6B74F25420CAE00EA56EE /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B74E25420CAE00EA56EE /* ViewRouter.swift */; };
+		EB1772B45B6784480A4F86CF /* Pods_SimlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913D55606CF68C9F2C2B1BA9 /* Pods_SimlanTests.framework */; };
+		F5F7466FC303395A7556905E /* Pods_Simlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E68C92798918E80DB71222 /* Pods_Simlan.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30EDCBA4254165C000483394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30EDCB8A254165BE00483394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30EDCB91254165BE00483394;
+			remoteInfo = Simlan;
+		};
+		30EDCBAF254165C000483394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30EDCB8A254165BE00483394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30EDCB91254165BE00483394;
+			remoteInfo = Simlan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11B2D4BA0892BCE4CAB07312 /* Pods-SimlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimlanTests.release.xcconfig"; path = "Target Support Files/Pods-SimlanTests/Pods-SimlanTests.release.xcconfig"; sourceTree = "<group>"; };
+		30EDCB92254165BE00483394 /* Simlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EDCB95254165BE00483394 /* SimlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimlanApp.swift; sourceTree = "<group>"; };
+		30EDCB97254165BE00483394 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		30EDCB99254165C000483394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30EDCB9C254165C000483394 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30EDCB9E254165C000483394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EDCBA3254165C000483394 /* SimlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EDCBA7254165C000483394 /* SimlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimlanTests.swift; sourceTree = "<group>"; };
+		30EDCBA9254165C000483394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EDCBAE254165C000483394 /* SimlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EDCBB2254165C000483394 /* SimlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimlanUITests.swift; sourceTree = "<group>"; };
+		30EDCBB4254165C000483394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EDCC03254177F900483394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30F6B7282542020D00EA56EE /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		30F6B739254203B500EA56EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		30F6B73E254208A200EA56EE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		30F6B743254208EF00EA56EE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		30F6B74E25420CAE00EA56EE /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		34E68C92798918E80DB71222 /* Pods_Simlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43CE6A41397B0CB113A3B81D /* Pods-SimlanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimlanTests.debug.xcconfig"; path = "Target Support Files/Pods-SimlanTests/Pods-SimlanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		546352FF5C2652343EE1ABFF /* Pods-Simlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simlan.debug.xcconfig"; path = "Target Support Files/Pods-Simlan/Pods-Simlan.debug.xcconfig"; sourceTree = "<group>"; };
+		913D55606CF68C9F2C2B1BA9 /* Pods_SimlanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimlanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A30006A733273135F4692F9 /* Pods-Simlan-SimlanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simlan-SimlanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Simlan-SimlanUITests/Pods-Simlan-SimlanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE818E9E5606DEDBE607232 /* Pods-Simlan-SimlanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simlan-SimlanUITests.release.xcconfig"; path = "Target Support Files/Pods-Simlan-SimlanUITests/Pods-Simlan-SimlanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E10C2D75A6C02A1E12543685 /* Pods_Simlan_SimlanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simlan_SimlanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3760727865F72AAC3641186 /* Pods-Simlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simlan.release.xcconfig"; path = "Target Support Files/Pods-Simlan/Pods-Simlan.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30EDCB8F254165BE00483394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F7466FC303395A7556905E /* Pods_Simlan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EDCBA0254165C000483394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1772B45B6784480A4F86CF /* Pods_SimlanTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EDCBAB254165C000483394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AFA1724B47871F56B7BA17 /* Pods_Simlan_SimlanUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30EDCB89254165BE00483394 = {
+			isa = PBXGroup;
+			children = (
+				30EDCB94254165BE00483394 /* Simlan */,
+				30EDCBA6254165C000483394 /* SimlanTests */,
+				30EDCBB1254165C000483394 /* SimlanUITests */,
+				30EDCB93254165BE00483394 /* Products */,
+				4E1D8C55E1E559F6D33F29B7 /* Pods */,
+				4BD27030B1C11C68B4A2CE15 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30EDCB93254165BE00483394 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30EDCB92254165BE00483394 /* Simlan.app */,
+				30EDCBA3254165C000483394 /* SimlanTests.xctest */,
+				30EDCBAE254165C000483394 /* SimlanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30EDCB94254165BE00483394 /* Simlan */ = {
+			isa = PBXGroup;
+			children = (
+				30EDCC03254177F900483394 /* GoogleService-Info.plist */,
+				30F6B727254201DA00EA56EE /* View */,
+				30EDCB95254165BE00483394 /* SimlanApp.swift */,
+				30EDCB97254165BE00483394 /* ContentView.swift */,
+				30F6B74E25420CAE00EA56EE /* ViewRouter.swift */,
+				30EDCB99254165C000483394 /* Assets.xcassets */,
+				30EDCB9E254165C000483394 /* Info.plist */,
+				30EDCB9B254165C000483394 /* Preview Content */,
+			);
+			path = Simlan;
+			sourceTree = "<group>";
+		};
+		30EDCB9B254165C000483394 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30EDCB9C254165C000483394 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30EDCBA6254165C000483394 /* SimlanTests */ = {
+			isa = PBXGroup;
+			children = (
+				30EDCBA7254165C000483394 /* SimlanTests.swift */,
+				30EDCBA9254165C000483394 /* Info.plist */,
+			);
+			path = SimlanTests;
+			sourceTree = "<group>";
+		};
+		30EDCBB1254165C000483394 /* SimlanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				30EDCBB2254165C000483394 /* SimlanUITests.swift */,
+				30EDCBB4254165C000483394 /* Info.plist */,
+			);
+			path = SimlanUITests;
+			sourceTree = "<group>";
+		};
+		30F6B727254201DA00EA56EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30F6B7282542020D00EA56EE /* SignupView.swift */,
+				30F6B739254203B500EA56EE /* LoginView.swift */,
+				30F6B73E254208A200EA56EE /* ErrorView.swift */,
+				30F6B743254208EF00EA56EE /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BD27030B1C11C68B4A2CE15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34E68C92798918E80DB71222 /* Pods_Simlan.framework */,
+				E10C2D75A6C02A1E12543685 /* Pods_Simlan_SimlanUITests.framework */,
+				913D55606CF68C9F2C2B1BA9 /* Pods_SimlanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E1D8C55E1E559F6D33F29B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				546352FF5C2652343EE1ABFF /* Pods-Simlan.debug.xcconfig */,
+				E3760727865F72AAC3641186 /* Pods-Simlan.release.xcconfig */,
+				9A30006A733273135F4692F9 /* Pods-Simlan-SimlanUITests.debug.xcconfig */,
+				ABE818E9E5606DEDBE607232 /* Pods-Simlan-SimlanUITests.release.xcconfig */,
+				43CE6A41397B0CB113A3B81D /* Pods-SimlanTests.debug.xcconfig */,
+				11B2D4BA0892BCE4CAB07312 /* Pods-SimlanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30EDCB91254165BE00483394 /* Simlan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30EDCBB7254165C000483394 /* Build configuration list for PBXNativeTarget "Simlan" */;
+			buildPhases = (
+				493FB097F193B80FF49E325A /* [CP] Check Pods Manifest.lock */,
+				30EDCB8E254165BE00483394 /* Sources */,
+				30EDCB8F254165BE00483394 /* Frameworks */,
+				30EDCB90254165BE00483394 /* Resources */,
+				8A9181490A7E28D9CB566714 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Simlan;
+			productName = Simlan;
+			productReference = 30EDCB92254165BE00483394 /* Simlan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30EDCBA2254165C000483394 /* SimlanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30EDCBBA254165C000483394 /* Build configuration list for PBXNativeTarget "SimlanTests" */;
+			buildPhases = (
+				7EBB6292C2B1B139C57DECA3 /* [CP] Check Pods Manifest.lock */,
+				30EDCB9F254165C000483394 /* Sources */,
+				30EDCBA0254165C000483394 /* Frameworks */,
+				30EDCBA1254165C000483394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30EDCBA5254165C000483394 /* PBXTargetDependency */,
+			);
+			name = SimlanTests;
+			productName = SimlanTests;
+			productReference = 30EDCBA3254165C000483394 /* SimlanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30EDCBAD254165C000483394 /* SimlanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30EDCBBD254165C000483394 /* Build configuration list for PBXNativeTarget "SimlanUITests" */;
+			buildPhases = (
+				A87B94DB9742E8996378F2C9 /* [CP] Check Pods Manifest.lock */,
+				30EDCBAA254165C000483394 /* Sources */,
+				30EDCBAB254165C000483394 /* Frameworks */,
+				30EDCBAC254165C000483394 /* Resources */,
+				04656350142CBD1C255FA285 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30EDCBB0254165C000483394 /* PBXTargetDependency */,
+			);
+			name = SimlanUITests;
+			productName = SimlanUITests;
+			productReference = 30EDCBAE254165C000483394 /* SimlanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30EDCB8A254165BE00483394 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					30EDCB91254165BE00483394 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					30EDCBA2254165C000483394 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 30EDCB91254165BE00483394;
+					};
+					30EDCBAD254165C000483394 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 30EDCB91254165BE00483394;
+					};
+				};
+			};
+			buildConfigurationList = 30EDCB8D254165BE00483394 /* Build configuration list for PBXProject "Simlan" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30EDCB89254165BE00483394;
+			productRefGroup = 30EDCB93254165BE00483394 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30EDCB91254165BE00483394 /* Simlan */,
+				30EDCBA2254165C000483394 /* SimlanTests */,
+				30EDCBAD254165C000483394 /* SimlanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30EDCB90254165BE00483394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EDCB9D254165C000483394 /* Preview Assets.xcassets in Resources */,
+				30EDCB9A254165C000483394 /* Assets.xcassets in Resources */,
+				30EDCC04254177F900483394 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EDCBA1254165C000483394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EDCBAC254165C000483394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04656350142CBD1C255FA285 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simlan-SimlanUITests/Pods-Simlan-SimlanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simlan-SimlanUITests/Pods-Simlan-SimlanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simlan-SimlanUITests/Pods-Simlan-SimlanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		493FB097F193B80FF49E325A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simlan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EBB6292C2B1B139C57DECA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimlanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A9181490A7E28D9CB566714 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simlan/Pods-Simlan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simlan/Pods-Simlan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simlan/Pods-Simlan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A87B94DB9742E8996378F2C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simlan-SimlanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30EDCB8E254165BE00483394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F6B7292542020D00EA56EE /* SignupView.swift in Sources */,
+				30F6B74F25420CAE00EA56EE /* ViewRouter.swift in Sources */,
+				30F6B744254208EF00EA56EE /* HomeView.swift in Sources */,
+				30F6B73F254208A200EA56EE /* ErrorView.swift in Sources */,
+				30EDCB98254165BE00483394 /* ContentView.swift in Sources */,
+				30EDCB96254165BE00483394 /* SimlanApp.swift in Sources */,
+				30F6B73A254203B500EA56EE /* LoginView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EDCB9F254165C000483394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EDCBA8254165C000483394 /* SimlanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EDCBAA254165C000483394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EDCBB3254165C000483394 /* SimlanUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30EDCBA5254165C000483394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30EDCB91254165BE00483394 /* Simlan */;
+			targetProxy = 30EDCBA4254165C000483394 /* PBXContainerItemProxy */;
+		};
+		30EDCBB0254165C000483394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30EDCB91254165BE00483394 /* Simlan */;
+			targetProxy = 30EDCBAF254165C000483394 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30EDCBB5254165C000483394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30EDCBB6254165C000483394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30EDCBB8254165C000483394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546352FF5C2652343EE1ABFF /* Pods-Simlan.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Simlan/Preview Content\"";
+				DEVELOPMENT_TEAM = A48N444CHW;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Simlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.munti.Simlan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30EDCBB9254165C000483394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3760727865F72AAC3641186 /* Pods-Simlan.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Simlan/Preview Content\"";
+				DEVELOPMENT_TEAM = A48N444CHW;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Simlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.munti.Simlan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		30EDCBBB254165C000483394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43CE6A41397B0CB113A3B81D /* Pods-SimlanTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A48N444CHW;
+				INFOPLIST_FILE = SimlanTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.munti.SimlanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simlan.app/Simlan";
+			};
+			name = Debug;
+		};
+		30EDCBBC254165C000483394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B2D4BA0892BCE4CAB07312 /* Pods-SimlanTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A48N444CHW;
+				INFOPLIST_FILE = SimlanTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.munti.SimlanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simlan.app/Simlan";
+			};
+			name = Release;
+		};
+		30EDCBBE254165C000483394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A30006A733273135F4692F9 /* Pods-Simlan-SimlanUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A48N444CHW;
+				INFOPLIST_FILE = SimlanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.munti.SimlanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simlan;
+			};
+			name = Debug;
+		};
+		30EDCBBF254165C000483394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE818E9E5606DEDBE607232 /* Pods-Simlan-SimlanUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A48N444CHW;
+				INFOPLIST_FILE = SimlanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.munti.SimlanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simlan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30EDCB8D254165BE00483394 /* Build configuration list for PBXProject "Simlan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EDCBB5254165C000483394 /* Debug */,
+				30EDCBB6254165C000483394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30EDCBB7254165C000483394 /* Build configuration list for PBXNativeTarget "Simlan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EDCBB8254165C000483394 /* Debug */,
+				30EDCBB9254165C000483394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30EDCBBA254165C000483394 /* Build configuration list for PBXNativeTarget "SimlanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EDCBBB254165C000483394 /* Debug */,
+				30EDCBBC254165C000483394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30EDCBBD254165C000483394 /* Build configuration list for PBXNativeTarget "SimlanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EDCBBE254165C000483394 /* Debug */,
+				30EDCBBF254165C000483394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30EDCB8A254165BE00483394 /* Project object */;
+}
