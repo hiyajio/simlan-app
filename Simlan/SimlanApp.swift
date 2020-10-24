@@ -7,12 +7,14 @@
 
 import SwiftUI
 import Firebase
+import FirebaseCore
 
 @main
 struct SimlanApp: App {
     @EnvironmentObject var viewRouter: ViewRouter
     
     init() {
+		StartupAPI.shared.testURL()
         FirebaseApp.configure()
     }
     

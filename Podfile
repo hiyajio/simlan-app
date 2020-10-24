@@ -8,6 +8,7 @@ target 'Simlan' do
   # Pods for Simlan
   pod 'Firebase'
   pod 'Firebase/Auth'
+  pod 'Alamofire'
   
   target 'SimlanTests' do
     inherit! :search_paths
