@@ -1,3 +1,3 @@
-# :phone: Simlan App
+# :iphone: Simlan App
 
 ---
