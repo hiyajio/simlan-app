@@ -153,7 +153,7 @@ struct LoginView : View {
         }
         else{
             
-            self.error = "Please fill all the contents properly"
+            self.error = "Please fill all the info properly"
             self.alert.toggle()
         }
     }
@@ -177,7 +177,7 @@ struct LoginView : View {
         }
         else{
             
-            self.error = "Email Id is empty"
+            self.error = "No email provided to reset password"
             self.alert.toggle()
         }
     }

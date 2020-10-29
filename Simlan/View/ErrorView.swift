@@ -30,7 +30,7 @@ struct ErrorView : View {
                 }
                 .padding(.horizontal, 25)
                 
-                Text(self.error == "RESET" ? "Password reset link has been sent successfully" : self.error)
+                Text(self.error == "RESET" ? "Password reset link sent successfully" : self.error)
                     .foregroundColor(self.color)
                     .padding(.top)
                     .padding(.horizontal, 25)

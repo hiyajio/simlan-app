@@ -169,13 +169,13 @@ struct SignupView : View {
             }
             else{
                 
-                self.error = "Password mismatch"
+                self.error = "Passwords do not match"
                 self.alert.toggle()
             }
         }
         else{
             
-            self.error = "Please fill all the contents properly"
+            self.error = "Please fill all the info properly"
             self.alert.toggle()
         }
     }
