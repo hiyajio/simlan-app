@@ -24,7 +24,14 @@ class StartupAPI: ObservableObject{
 	// MARK: - Functions
 	
 	func testURL(){
-		AF.request(StartupAPI.rootURL + "test").responseJSON { response in
+		let parameters: [String: [String]] = [
+			"foo": ["bar"],
+			"baz": ["a", "b"],
+			"qux": ["x", "y", "z"]
+		]
+
+		
+		AF.request(StartupAPI.rootURL + "test",method: .get,parameters: parameters).responseJSON { response in
 			debugPrint(response)
 		}
 		
