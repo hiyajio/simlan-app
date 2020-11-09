@@ -53,15 +53,15 @@ struct Education{
 struct Listing{
 	var name:String
 	var ownerId:String?
-	var start:Date?
+	var start:Date
 	var location:String?
 	var type:String?
 	var paid:Bool?
-	var title:String
+	var title:String?
 	var description:String?
 	var tags:[String]
 	
-	init(name:String,start:Date?=nil,location:String?=nil,type:String?=nil,paid:Bool?=nil,title:String,description:String?=nil, tags:[String]=[]){
+	init(name:String,start:Date,location:String?=nil,type:String?=nil,paid:Bool?=nil,title:String? = nil,description:String?=nil, tags:[String]=[]){
 		self.name = name
 		self.start = start
 		self.location = location
@@ -78,7 +78,7 @@ struct Listing{
 		
 		name = info.name
 		ownerId = info.owner.objectId
-		start = df.date(from: info.start.iso)
+		start = df.date(from: info.start.iso)!
 		location = info.location
 		type = info.type
 		paid = info.paid

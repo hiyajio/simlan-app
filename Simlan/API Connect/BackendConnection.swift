@@ -15,12 +15,14 @@ class StartupAPI: ObservableObject{
 	static var rootURL:String = "https://startup-5676.nodechef.com/"
 
 	@Published var sessionId:String? = UserDefaults.standard.string(forKey: "sessionId")
-	@Published var currentUser:User? = User()
+	@Published var currentUser:User? = nil
 	@Published var listings:[Listing] = []
 	
 	// MARK: - Init
 	
 	init(){
+		login()
+		getListings()
 	}
 	
 	
@@ -398,7 +400,8 @@ class StartupAPI: ObservableObject{
 	struct CreateListingRequest:Encodable{
 		let sessionId:String
 		let name:String
-		let start:String?
+		let start:String
+		let title:String?
 		let location:String?
 		let type:String?
 		let paid:Bool?
@@ -411,12 +414,8 @@ class StartupAPI: ObservableObject{
 			
 			sessionId = id
 			name = listing.name
-			if let startDate = listing.start{
-				start = df.string(from: startDate)
-			}else{
-				start = nil
-			}
-			
+			start = df.string(from: listing.start)
+			title = listing.title
 			location = listing.location
 			type = listing.type
 			paid = listing.paid
