@@ -16,6 +16,7 @@ class StartupAPI: ObservableObject{
 
 	@Published var sessionId:String? = UserDefaults.standard.string(forKey: "sessionId")
 	@Published var currentUser:User? = User()
+	@Published var listings:[Listing] = []
 	
 	// MARK: - Init
 	
@@ -24,7 +25,7 @@ class StartupAPI: ObservableObject{
 	
 	
 	
-	// MARK: - Create and Login
+	// MARK: - User Stuff
 	func createUser(firstName:String, lastName:String, email:String, password:String, isApplicant:Bool){
 		let requestParam:CreateUserRequest = CreateUserRequest(firstName: firstName, lastName: lastName, email: email, password: password, type: isApplicant)
 		
@@ -187,6 +188,59 @@ class StartupAPI: ObservableObject{
 	
 	// MARK: - Listings
 	
+	func getListings(name:String? = nil, type:String? = nil, paid:Bool? = nil, sortBy:String? = nil){
+		let requestParam = ListingRequest(name: name, type: type, paid: paid, sortBy: sortBy)
+		
+		AF.request(StartupAPI.rootURL + "listings", method: .get, parameters: requestParam)
+			.responseDecodable(of: ListingResult.self){ response in
+				guard let value = response.value else { fatalError("\(response.debugDescription)") }
+				
+				if value.error != nil{
+					print("\n\nerror: \(value.error!)\n\n")
+					return
+				}
+				
+				for listing in value.listings{
+					self.listings.append(Listing(from: listing))
+				}
+				
+				
+			}
+	}
+	
+	func createListing(listing:Listing){
+		guard let id = sessionId else { return }
+		
+		let requestParam = CreateListingRequest(id: id, listing: listing)
+		
+		AF.request(StartupAPI.rootURL + "listings/create", method: .post, parameters: requestParam, encoder: URLEncodedFormParameterEncoder(destination: .queryString))
+			.validate()
+			.responseJSON{ response in
+
+				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
+				if let error = value["error"] as? String{
+					print("\n\n error: \(error)\n\n")
+				}
+			}
+	}
+	
+	func updateListing(listing:Listing){
+		guard let id = sessionId else { return }
+		
+		let requestParam = CreateListingRequest(id: id, listing: listing)
+		
+		AF.request(StartupAPI.rootURL + "listings/update", method: .put, parameters: requestParam, encoder: URLEncodedFormParameterEncoder(destination: .queryString))
+			.validate()
+			.responseJSON{ response in
+				
+				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
+				if let error = value["error"] as? String{
+					print("\n\n error: \(error)\n\n")
+				}
+			}
+	}
+	
+	
 	// MARK: - Test URL
 	
 	func testURL(){
@@ -298,6 +352,78 @@ class StartupAPI: ObservableObject{
 	
 	struct ResetRequest:Encodable{
 		let email:String
+	}
+	
+	struct ListingRequest:Encodable {
+		let name:String?
+		let type:String?
+		let paid:Bool?
+		let sortBy:String?
+	}
+	
+	struct ListingResult:Codable{
+		let listings:[ListingInfo]
+		let error:String?
+		
+		struct ListingInfo:Codable{
+			let createdAt:String
+			let description:String
+			let name:String
+			let objectId:String
+			let owner:Owner
+			let paid:Bool
+			let start:Start
+			let tags:[String]
+			let location:String
+			let title:String
+			let type:String
+			let updatedAt:String
+			
+			
+			
+			struct Owner:Codable{
+				let __type:String
+				let className:String
+				let objectId:String
+			}
+			
+			struct Start:Codable{
+				let __type:String
+				let iso:String
+			}
+		}
+	}
+	
+	
+	struct CreateListingRequest:Encodable{
+		let sessionId:String
+		let name:String
+		let start:String?
+		let location:String?
+		let type:String?
+		let paid:Bool?
+		let description:String?
+		let tags:[String]
+		
+		init(id:String, listing:Listing){
+			let df =  DateFormatter()
+			df.dateFormat = "yyyy-MM-dd"
+			
+			sessionId = id
+			name = listing.name
+			if let startDate = listing.start{
+				start = df.string(from: startDate)
+			}else{
+				start = nil
+			}
+			
+			location = listing.location
+			type = listing.type
+			paid = listing.paid
+			description = listing.description
+			tags = listing.tags
+			
+		}
 	}
 }
 

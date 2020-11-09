@@ -52,6 +52,7 @@ struct Education{
 
 struct Listing{
 	var name:String
+	var ownerId:String?
 	var start:Date?
 	var location:String?
 	var type:String?
@@ -59,4 +60,30 @@ struct Listing{
 	var title:String
 	var description:String?
 	var tags:[String]
+	
+	init(name:String,start:Date?=nil,location:String?=nil,type:String?=nil,paid:Bool?=nil,title:String,description:String?=nil, tags:[String]=[]){
+		self.name = name
+		self.start = start
+		self.location = location
+		self.type = type
+		self.paid = paid
+		self.title = title
+		self.description = description
+		self.tags = tags
+	}
+	
+	init(from info:StartupAPI.ListingResult.ListingInfo){
+		let df = DateFormatter()
+		df.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ" // iso8601
+		
+		name = info.name
+		ownerId = info.owner.objectId
+		start = df.date(from: info.start.iso)
+		location = info.location
+		type = info.type
+		paid = info.paid
+		title = info.title
+		description = info.description
+		tags = info.tags
+	}
 }
