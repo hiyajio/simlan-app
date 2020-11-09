@@ -20,6 +20,7 @@
 		30F6B73F254208A200EA56EE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B73E254208A200EA56EE /* ErrorView.swift */; };
 		30F6B744254208EF00EA56EE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B743254208EF00EA56EE /* HomeView.swift */; };
 		30F6B74F25420CAE00EA56EE /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6B74E25420CAE00EA56EE /* ViewRouter.swift */; };
+		AF10F3282558D4BD0019EFC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10F3272558D4BD0019EFC3 /* User.swift */; };
 		AF5298F22544DF5600E1956B /* BackendConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5298F12544DF5600E1956B /* BackendConnection.swift */; };
 		EB1772B45B6784480A4F86CF /* Pods_SimlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913D55606CF68C9F2C2B1BA9 /* Pods_SimlanTests.framework */; };
 		F5F7466FC303395A7556905E /* Pods_Simlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E68C92798918E80DB71222 /* Pods_Simlan.framework */; };
@@ -68,6 +69,7 @@
 		913D55606CF68C9F2C2B1BA9 /* Pods_SimlanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimlanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A30006A733273135F4692F9 /* Pods-Simlan-SimlanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simlan-SimlanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Simlan-SimlanUITests/Pods-Simlan-SimlanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE818E9E5606DEDBE607232 /* Pods-Simlan-SimlanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simlan-SimlanUITests.release.xcconfig"; path = "Target Support Files/Pods-Simlan-SimlanUITests/Pods-Simlan-SimlanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF10F3272558D4BD0019EFC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF5298F12544DF5600E1956B /* BackendConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendConnection.swift; sourceTree = "<group>"; };
 		E10C2D75A6C02A1E12543685 /* Pods_Simlan_SimlanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simlan_SimlanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3760727865F72AAC3641186 /* Pods-Simlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simlan.release.xcconfig"; path = "Target Support Files/Pods-Simlan/Pods-Simlan.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,9 +209,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF10F3262558D49F0019EFC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF10F3272558D4BD0019EFC3 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AF5298F02544DF1D00E1956B /* API Connect */ = {
 			isa = PBXGroup;
 			children = (
+				AF10F3262558D49F0019EFC3 /* Models */,
 				AF5298F12544DF5600E1956B /* BackendConnection.swift */,
 			);
 			path = "API Connect";
@@ -458,6 +469,7 @@
 				AF5298F22544DF5600E1956B /* BackendConnection.swift in Sources */,
 				30F6B744254208EF00EA56EE /* HomeView.swift in Sources */,
 				30F6B73F254208A200EA56EE /* ErrorView.swift in Sources */,
+				AF10F3282558D4BD0019EFC3 /* User.swift in Sources */,
 				30EDCB98254165BE00483394 /* ContentView.swift in Sources */,
 				30EDCB96254165BE00483394 /* SimlanApp.swift in Sources */,
 				30F6B73A254203B500EA56EE /* LoginView.swift in Sources */,

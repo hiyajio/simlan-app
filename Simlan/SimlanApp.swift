@@ -14,7 +14,8 @@ struct SimlanApp: App {
     @EnvironmentObject var viewRouter: ViewRouter
     
     init() {
-		StartupAPI.shared.testURL()
+		StartupAPI.shared.updateEducation(education: Education(college: "ND Sux", major: "Undecided", gpa: 1.0, tags: []))
+		StartupAPI.shared.updateExperience(experience: Experience(name: "A Job", description: "nothing", tags: []))
         FirebaseApp.configure()
     }
     
