@@ -19,7 +19,7 @@ struct TestView: View {
 		}else{
 			Text("logged out")
 			Button("login"){
-				api.login()
+				api.login(email: "testing3@yahoo.com", pw:"password")
 			}
 		}
     }

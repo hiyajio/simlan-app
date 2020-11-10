@@ -21,7 +21,7 @@ class StartupAPI: ObservableObject{
 	// MARK: - Init
 	
 	init(){
-		login()
+		getUser()
 		getListings()
 	}
 	
@@ -42,12 +42,12 @@ class StartupAPI: ObservableObject{
 				if let id = value["sessionId"] as? String {
 					self.sessionId = id
 					UserDefaults.standard.setValue(id, forKey: "sessionId")
-					self.login()
+					self.getUser()
 				}
 			}
 	}
 	
-	func login(){
+	func getUser(){
 		guard let id = sessionId else { return }
 		
 		AF.request(StartupAPI.rootURL + "user", method: .get, parameters: ["sessionId":id])
@@ -58,8 +58,26 @@ class StartupAPI: ObservableObject{
 			}
 	}
 	
+	func login(email:String, pw:String){
+		AF.request(StartupAPI.rootURL + "user/login", method: .get, parameters: ["email":email, "password":pw])
+			.responseJSON{ response in
+				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
+				if let error = value["error"] as? String{
+					print("\n\n error: \(error)\n\n")
+				}
+				
+				if let id = value["sessionId"] as? String {
+					self.sessionId = id
+					UserDefaults.standard.setValue(id, forKey: "sessionId")
+					self.getUser()
+				}
+			}
+	}
+	
 	func logout(){
 		currentUser = nil
+		sessionId = nil
+		UserDefaults.standard.removeObject(forKey: "sessionId")
 	}
 	
 	
