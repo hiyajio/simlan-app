@@ -12,10 +12,14 @@ struct TestView: View {
 	
     var body: some View {
 		if let user = api.currentUser{
-			Text(user.email)
-			Button("logout"){
-				api.logout()
+			VStack{
+				Text(user.email)
+				Text(user.education[0].college)
+				Button("logout"){
+					api.logout()
+				}
 			}
+			
 		}else{
 			Text("logged out")
 			Button("login"){

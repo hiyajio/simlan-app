@@ -23,7 +23,7 @@ class User: ObservableObject{
 	@Published var github:String?
 	@Published var tags:[String] = []
 	
-	init(from info:StartupAPI.UserResponse.User){
+	init(from info:StartupAPI.UserResponse.User, experience:[StartupAPI.UserResponse.Experience]=[], education:[StartupAPI.UserResponse.Education] = []){
 		firstName = info.firstName
 		lastName = info.lastName
 		email = info.email
@@ -35,6 +35,15 @@ class User: ObservableObject{
 		github = info.github
 		tags = info.tags ?? []
 		
+		for exp in experience{
+			self.experience.append(Experience(from: exp))
+		}
+		
+		for edu in education{
+			self.education.append(Education(from: edu))
+		}
+		
+		
 	}
 	
 }
@@ -42,24 +51,72 @@ class User: ObservableObject{
 
 struct Experience{
 	var name:String
-	var start:Date?
+	var start:Date
 	var end:Date?
 	var present:Bool?
 	var project:Bool?
 	var title:String?
-	var description:String
-	var tags:[String]
+	var description:String?
+	var tags:[String] = []
+	
+	init(name:String, start:Date, tags:[String]){
+		self.name = name
+		self.start = start
+		self.tags = tags
+	}
+	
+	init(from info:StartupAPI.UserResponse.Experience) {
+		let df = DateFormatter()
+		df.dateFormat = "yyyy-MM-dd"
+		
+		name = info.name
+		start = df.date(from: info.start)!
+		
+		if let endDate = info.end{
+			end = df.date(from: endDate)
+		}else{
+			end = nil
+		}
+		
+		present = info.present
+		project = info.project
+		title = info.title
+		description = info.description
+		tags = info.tags ?? []
+		
+	}
 }
 
 struct Education{
 	var college:String
-	var start:Date = Date()
+	var start:Date
 	var end:Date?
 	var present:Bool?
 	var major:String
 	var minor:String?
 	var gpa:Double
 	var tags:[String]
+	
+	init(from info:StartupAPI.UserResponse.Education){
+		let df = DateFormatter()
+		df.dateFormat = "yyyy-MM-dd"
+		
+		college = info.college
+		start = df.date(from: info.start)!
+		
+		if let endDate = info.end{
+			end = df.date(from: endDate)
+		}else{
+			end = nil
+		}
+		
+		present = info.present
+		major = info.major
+		minor = info.minor
+		gpa = Double(info.gpa ?? "0.0") ?? 0.0
+		tags = info.tags ?? []
+		
+	}
 }
 
 struct Listing{

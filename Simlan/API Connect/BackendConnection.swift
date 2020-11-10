@@ -52,9 +52,10 @@ class StartupAPI: ObservableObject{
 		
 		AF.request(StartupAPI.rootURL + "user", method: .get, parameters: ["sessionId":id])
 			.responseDecodable(of: UserResponse.self){ response in
+				debugPrint(response)
 				guard let value = response.value else { fatalError("\(response.debugDescription)") }
 				
-				self.currentUser = User(from: value.user)
+				self.currentUser = User(from: value.user, experience: value.experience, education: value.education)
 			}
 	}
 	
@@ -126,7 +127,6 @@ class StartupAPI: ObservableObject{
 				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
 				if let error = value["error"] as? String{
 					print("\n\n error: \(error)\n\n")
-					
 				}
 			}
 	}
@@ -333,12 +333,12 @@ class StartupAPI: ObservableObject{
 	struct ExpRequest:Codable{
 		var sessionId:String
 		var name:String
-		var start:String?
+		var start:String
 		var end:String?
 		var present:Bool?
 		var project:Bool?
 		var title:String?
-		var description:String
+		var description:String?
 		var tags:[String]
 		
 		init(sessionId:String, experience:Experience){
@@ -348,11 +348,8 @@ class StartupAPI: ObservableObject{
 			self.sessionId = sessionId
 			name = experience.name
 			
-			if let start = experience.start{
-				self.start = df.string(from: start)
-			}else{
-				self.start = nil
-			}
+			self.start = df.string(from: experience.start)
+			
 			
 			
 			if let end = experience.end{
@@ -442,6 +439,32 @@ class StartupAPI: ObservableObject{
 			let country:String?
 			let linkedIn:String?
 		}
+		
+		let education:[Education]
+		let experience:[Experience]
+		
+		struct Education:Codable{
+			let college:String
+			let present:Bool?
+			let major:String
+			let gpa:String?
+			let end:String?
+			let minor:String?
+			let start:String
+			let tags:[String]?
+		}
+		
+		struct Experience:Codable{
+			let name:String
+			let present:Bool?
+			let project:Bool?
+			let description:String?
+			let start:String
+			let end:String?
+			let title:String?
+			let tags:[String]?
+		}
+
 	}
 }
 
