@@ -445,7 +445,7 @@ class StartupAPI: ObservableObject{
 			let start:String
 			let tags:[String]?
 			let location:String?
-			let title:String?
+			let title:String
 			let type:String?
 		}
 	}
@@ -455,7 +455,7 @@ class StartupAPI: ObservableObject{
 		let sessionId:String
 		let name:String
 		let start:String
-		let title:String?
+		let title:String
 		let location:String?
 		let type:String?
 		let paid:Bool?
