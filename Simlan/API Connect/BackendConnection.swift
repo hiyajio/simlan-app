@@ -152,6 +152,61 @@ class StartupAPI: ObservableObject{
 			}
 	}
 	
+	// MARK: - Deleting
+	func deleteExperience(experience: Experience){
+		guard let id = sessionId else { return }
+		let requestParams = ExpRequest(sessionId: id, experience: experience)
+		
+		AF.request(StartupAPI.rootURL + "user/experience", method: .delete, parameters: requestParams, encoder: URLEncodedFormParameterEncoder(destination: .queryString))
+			.validate()
+			.responseJSON{ response in
+				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
+				if let error = value["error"] as? String{
+					print("\n\n error: \(error)\n\n")
+				}
+				
+				if let message = value["msg"] as? String{
+					print("\n\n message: \(message)\n\n")
+				}
+			}
+	}
+	
+	func deleteEducation(education:Education){
+		guard let id = sessionId else { return }
+		let requestParams = EduRequest(sessionId: id, education: education)
+		
+		AF.request(StartupAPI.rootURL + "user/education", method: .delete, parameters: requestParams, encoder: URLEncodedFormParameterEncoder(destination: .queryString))
+			.validate()
+			.responseJSON{ response in
+				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
+				if let error = value["error"] as? String{
+					print("\n\n error: \(error)\n\n")
+				}
+				
+				if let message = value["msg"] as? String{
+					print("\n\n message: \(message)\n\n")
+				}
+			}
+	}
+	
+	func deleteListing(listing:Listing){
+		guard let id = sessionId else { return }
+		
+		let requestParam = CreateListingRequest(id: id, listing: listing)
+		
+		AF.request(StartupAPI.rootURL + "listings/delete", method: .delete, parameters: requestParam, encoder: URLEncodedFormParameterEncoder(destination: .queryString))
+			.validate()
+			.responseJSON{ response in
+				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
+				if let error = value["error"] as? String{
+					print("\n\n error: \(error)\n\n")
+				}
+				
+				if let message = value["msg"] as? String{
+					print("\n\n message: \(message)\n\n")
+				}
+			}
+	}
 	
 	// MARK: - Update
 	
