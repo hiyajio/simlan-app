@@ -15,15 +15,27 @@ class User: ObservableObject{
 	@Published var firstName:String = ""
 	@Published var lastName:String = ""
 	@Published var email:String = ""
-	@Published var password:String = ""
 	@Published var isApplicant:Bool = true
-	@Published var country:String = ""
-	@Published var location:String = ""
-	@Published var greeting:String = ""
-	@Published var linkedIn:String = ""
-	@Published var github:String = ""
+	@Published var country:String?
+	@Published var location:String?
+	@Published var greeting:String?
+	@Published var linkedIn:String?
+	@Published var github:String?
 	@Published var tags:[String] = []
 	
+	init(from info:StartupAPI.UserResponse.User){
+		firstName = info.firstName
+		lastName = info.lastName
+		email = info.email
+		isApplicant = info.type
+		country = info.country
+		location = info.location
+		greeting = info.greeting
+		linkedIn = info.linkedIn
+		github = info.github
+		tags = info.tags ?? []
+		
+	}
 	
 }
 
@@ -74,16 +86,16 @@ struct Listing{
 	
 	init(from info:StartupAPI.ListingResult.ListingInfo){
 		let df = DateFormatter()
-		df.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ" // iso8601
+		df.dateFormat = "yyyy-MM-dd"
 		
 		name = info.name
-		ownerId = info.owner.objectId
-		start = df.date(from: info.start.iso)!
+		ownerId = info.owner
+		start = df.date(from: info.start)!
 		location = info.location
 		type = info.type
 		paid = info.paid
 		title = info.title
 		description = info.description
-		tags = info.tags
+		tags = info.tags ?? []
 	}
 }

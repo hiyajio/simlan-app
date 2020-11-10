@@ -51,15 +51,15 @@ class StartupAPI: ObservableObject{
 		guard let id = sessionId else { return }
 		
 		AF.request(StartupAPI.rootURL + "user", method: .get, parameters: ["sessionId":id])
-			.validate()
-			.responseJSON{ response in
-				debugPrint(response)
-				guard let value = response.value as? [String:Any] else {fatalError("error parsing request result")}
-				if let error = value["error"] as? String{
-					print("\n\n error: \(error)\n\n")
-					
-				}
+			.responseDecodable(of: UserResponse.self){ response in
+				guard let value = response.value else { fatalError("\(response.debugDescription)") }
+				
+				self.currentUser = User(from: value.user)
 			}
+	}
+	
+	func logout(){
+		currentUser = nil
 	}
 	
 	
@@ -368,31 +368,15 @@ class StartupAPI: ObservableObject{
 		let error:String?
 		
 		struct ListingInfo:Codable{
-			let createdAt:String
-			let description:String
+			let description:String?
 			let name:String
-			let objectId:String
-			let owner:Owner
-			let paid:Bool
-			let start:Start
-			let tags:[String]
-			let location:String
-			let title:String
-			let type:String
-			let updatedAt:String
-			
-			
-			
-			struct Owner:Codable{
-				let __type:String
-				let className:String
-				let objectId:String
-			}
-			
-			struct Start:Codable{
-				let __type:String
-				let iso:String
-			}
+			let owner:String
+			let paid:Bool?
+			let start:String
+			let tags:[String]?
+			let location:String?
+			let title:String?
+			let type:String?
 		}
 	}
 	
@@ -422,6 +406,23 @@ class StartupAPI: ObservableObject{
 			description = listing.description
 			tags = listing.tags
 			
+		}
+	}
+	
+	struct UserResponse:Codable{
+		let user:User
+		
+		struct User:Codable{
+			let email:String
+			let firstName:String
+			let lastName:String
+			let github:String?
+			let greeting:String?
+			let location:String?
+			let tags:[String]?
+			let type:Bool
+			let country:String?
+			let linkedIn:String?
 		}
 	}
 }
