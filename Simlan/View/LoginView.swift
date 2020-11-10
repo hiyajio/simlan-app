@@ -84,7 +84,7 @@ struct LoginView : View {
                                 
                             }) {
                                 
-                                Text("Reset password")
+                                Text("Reset Password")
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("Color"))
                             }

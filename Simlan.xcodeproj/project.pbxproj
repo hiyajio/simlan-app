@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		19AFA1724B47871F56B7BA17 /* Pods_Simlan_SimlanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10C2D75A6C02A1E12543685 /* Pods_Simlan_SimlanUITests.framework */; };
+		3065D0E6254B42780042F300 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D0E5254B42780042F300 /* PageViewController.swift */; };
+		3065D0F7254B435C0042F300 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D0F6254B435C0042F300 /* Page.swift */; };
 		30EDCB96254165BE00483394 /* SimlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDCB95254165BE00483394 /* SimlanApp.swift */; };
 		30EDCB98254165BE00483394 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDCB97254165BE00483394 /* ContentView.swift */; };
 		30EDCB9A254165C000483394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EDCB99254165C000483394 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		11B2D4BA0892BCE4CAB07312 /* Pods-SimlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimlanTests.release.xcconfig"; path = "Target Support Files/Pods-SimlanTests/Pods-SimlanTests.release.xcconfig"; sourceTree = "<group>"; };
+		3065D0E5254B42780042F300 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		3065D0F6254B435C0042F300 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		30EDCB92254165BE00483394 /* Simlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EDCB95254165BE00483394 /* SimlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimlanApp.swift; sourceTree = "<group>"; };
 		30EDCB97254165BE00483394 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,8 +108,17 @@
 		3065D0DB254B40FB0042F300 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3065D0E5254B42780042F300 /* PageViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3065D0EA254B42E50042F300 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3065D0F6254B435C0042F300 /* Page.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		30EDCB89254165BE00483394 = {
@@ -133,6 +146,7 @@
 		30EDCB94254165BE00483394 /* Simlan */ = {
 			isa = PBXGroup;
 			children = (
+				3065D0EA254B42E50042F300 /* Model */,
 				3065D0DB254B40FB0042F300 /* ViewController */,
 				30EDCC03254177F900483394 /* GoogleService-Info.plist */,
 				30EDCB95254165BE00483394 /* SimlanApp.swift */,
@@ -457,8 +471,10 @@
 				30F6B74F25420CAE00EA56EE /* ViewRouter.swift in Sources */,
 				AF5298F22544DF5600E1956B /* BackendConnection.swift in Sources */,
 				30F6B744254208EF00EA56EE /* HomeView.swift in Sources */,
+				3065D0F7254B435C0042F300 /* Page.swift in Sources */,
 				30F6B73F254208A200EA56EE /* ErrorView.swift in Sources */,
 				30EDCB98254165BE00483394 /* ContentView.swift in Sources */,
+				3065D0E6254B42780042F300 /* PageViewController.swift in Sources */,
 				30EDCB96254165BE00483394 /* SimlanApp.swift in Sources */,
 				30F6B73A254203B500EA56EE /* LoginView.swift in Sources */,
 			);
