@@ -19,6 +19,8 @@ struct ContentView: View {
             VStack{
                 if self.viewRouter.currentView == "home" {
                     HomeView(viewRouter: self.viewRouter)
+                } else if self.viewRouter.currentView == "test" {
+                    TestView(viewRouter: self.viewRouter)
                 }
                 if self.viewRouter.currentView == "login" {
                     LoginView(viewRouter: self.viewRouter)

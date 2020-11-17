@@ -12,6 +12,8 @@ struct LoginView : View {
     
     @ObservedObject var viewRouter: ViewRouter
     
+    @StateObject var api = StartupAPI.shared // Make this an environment object
+    
     @State var color = Color.black.opacity(0.7)
     @State var email = ""
     @State var pass = ""
@@ -94,7 +96,7 @@ struct LoginView : View {
                         Button(action: {
                             
                             self.verify()
-                            
+                                                        
                         }) {
                             
                             Text("Log in")
@@ -136,20 +138,11 @@ struct LoginView : View {
         
         if self.email != "" && self.pass != ""{
             
-            Auth.auth().signIn(withEmail: self.email, password: self.pass) { (res, err) in
-                
-                if err != nil{
-                    
-                    self.error = err!.localizedDescription
-                    self.alert.toggle()
-                    return
-                }
-                
-                print("success")
-                self.viewRouter.currentView = "home"
-                UserDefaults.standard.set(true, forKey: "status")
-                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-            }
+            api.login(email: self.email, pw: self.pass)
+            print("success")
+            self.viewRouter.currentView = "home"
+            UserDefaults.standard.set(true, forKey: "status")
+            NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
         }
         else{
             

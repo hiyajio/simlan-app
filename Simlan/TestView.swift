@@ -6,31 +6,43 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct TestView: View {
-	@StateObject var api = StartupAPI.shared // Make this an environment object
-	
-    var body: some View {
-		if let user = api.currentUser{
-			VStack{
-				Text(user.email)
-				Text(user.education[0].college)
-				Button("logout"){
-					api.logout()
-				}
-			}
-			
-		}else{
-			Text("logged out")
-			Button("login"){
-				api.login(email: "testing3@yahoo.com", pw:"password")
-			}
-		}
-    }
+    @ObservedObject var viewRouter: ViewRouter
+        
+        var body: some View{
+            
+            VStack{
+                
+                Text("Logged successfully")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.black.opacity(0.7))
+                
+                Button(action: {
+                    
+                    try! Auth.auth().signOut()
+                    self.viewRouter.currentView = "login"
+                    UserDefaults.standard.set(false, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                    
+                }) {
+                    
+                    Text("Log out")
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width - 50)
+                }
+                .background(Color("Color"))
+                .cornerRadius(10)
+                .padding(.top, 25)
+            }
+        }
 }
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        TestView()
+        TestView(viewRouter: ViewRouter())
     }
 }

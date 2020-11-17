@@ -162,7 +162,7 @@ struct SignupView : View {
                     }
                     
                     print("success")
-                    self.viewRouter.currentView = "home"
+                    self.viewRouter.currentView = "test"
                     UserDefaults.standard.set(true, forKey: "status")
                     NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                 }
